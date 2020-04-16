@@ -41,16 +41,6 @@ namespace Medico
                     this.MainWindow = loginWindow;
                     //loginWindow.Opacity = 0;
                     loginWindow.Show();
-                    /*
-                    DoubleAnimation da = new DoubleAnimation();
-                    da.From = 0;
-                    da.To = 1;
-                    da.Duration = new Duration(TimeSpan.FromSeconds(2));
-                    da.AutoReverse = true;
-                    da.RepeatBehavior = RepeatBehavior.Forever;
-                    // da.RepeatBehavior=new RepeatBehavior(3);
-                    loginWindow.BeginAnimation(OpacityProperty, da);
-                    */
                     splashScreen.Close();
                 });
             });

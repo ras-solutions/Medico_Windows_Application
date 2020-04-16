@@ -13,7 +13,7 @@
                     <EventTrigger RoutedEvent="Label.Loaded">
                         <BeginStoryboard>
                             <Storyboard >
-                                <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:2" FillBehavior="HoldEnd" />
+                                <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:1" FillBehavior="HoldEnd" />
                             </Storyboard>
                         </BeginStoryboard>
                     </EventTrigger>
@@ -30,7 +30,7 @@
                     </EventTrigger>
                 </Label.Triggers>
             </Label>
-            <ComboBox Margin="195,169,195,0" VerticalAlignment="Top" FontFamily="./Font/#Helvetica-Bold" >
+            <ComboBox x:Name="role" Margin="195,169,195,0" VerticalAlignment="Top" FontFamily="./Font/#Helvetica-Bold" >
                 <ComboBoxItem Cursor="Hand" Content="User"/>
                 <ComboBoxItem Cursor="Hand" Content="Doctor"/>
                 <ComboBoxItem Cursor="Hand" Content="Reception"/>
@@ -39,29 +39,29 @@
                     <EventTrigger RoutedEvent="ComboBox.Loaded">
                         <BeginStoryboard>
                             <Storyboard >
-                                <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:2" FillBehavior="HoldEnd" />
+                                <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:3" FillBehavior="HoldEnd" />
                             </Storyboard>
                         </BeginStoryboard>
                     </EventTrigger>
                 </ComboBox.Triggers>
             </ComboBox>
-            <TextBox x:Name="email" HorizontalAlignment="Left" Height="24" Margin="134,271,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="244" GotFocus="email_GotFocus" LostFocus="email_LostFocus" Text="Email" >
+            <TextBox x:Name="email" HorizontalAlignment="Left" Height="24" Margin="134,271,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="244" GotFocus="email_GotFocus" LostFocus="email_LostFocus" Text="Email" TextChanged="email_TextChanged" >
                 <TextBox.Triggers>
                     <EventTrigger RoutedEvent="TextBox.Loaded">
                         <BeginStoryboard>
                             <Storyboard>
-                                <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:2" FillBehavior="HoldEnd" />
+                                <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:3" FillBehavior="HoldEnd" />
                             </Storyboard>
                         </BeginStoryboard>
                     </EventTrigger>
                 </TextBox.Triggers>
             </TextBox>
-            <TextBox x:Name="passwd" HorizontalAlignment="Left" Height="24" Margin="134,311,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="244" Text="Password" GotFocus="passwd_GotFocus">
+            <TextBox x:Name="passwd" HorizontalAlignment="Left" Height="24" Margin="134,311,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="244" Text="Password" GotFocus="passwd_GotFocus" LostFocus="passwd_LostFocus">
                 <TextBox.Triggers>
                     <EventTrigger RoutedEvent="TextBox.Loaded">
                         <BeginStoryboard>
                             <Storyboard>
-                                <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:2" FillBehavior="HoldEnd" />
+                                <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:3" FillBehavior="HoldEnd" />
                             </Storyboard>
                         </BeginStoryboard>
                     </EventTrigger>
@@ -72,26 +72,29 @@
                     <EventTrigger RoutedEvent="Button.Loaded">
                         <BeginStoryboard>
                             <Storyboard>
-                                <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:2" FillBehavior="HoldEnd" />
+                                <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:3" FillBehavior="HoldEnd" />
                             </Storyboard>
                         </BeginStoryboard>
                     </EventTrigger>
                 </Button.Triggers>
             </Button>
-            <Button x:Name="forgtPass" Content="Forgot Password" Margin="195,404,209,133" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" FontFamily = "./Font/#Helvetica">
+            <Button x:Name="forgtPass" Content="Forgot Password" Margin="195,404,209,129" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" FontFamily = "./Font/#Helvetica">
                 <Button.Triggers>
                     <EventTrigger RoutedEvent="Button.Loaded">
                         <BeginStoryboard>
                             <Storyboard>
-                                <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:2" FillBehavior="HoldEnd" />
+                                <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:3" FillBehavior="HoldEnd" />
                             </Storyboard>
                         </BeginStoryboard>
                     </EventTrigger>
                 </Button.Triggers>
             </Button>
-        </Grid>
 
+
+        </Grid>
+    
     </Grid>
+    
     <Window.Triggers>
         <EventTrigger RoutedEvent="Window.Loaded">
 
