@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Medico"
         mc:Ignorable="d"
-        Title="Reception" WindowStartupLocation="CenterScreen" Closing="Window_Closing" ResizeMode="NoResize" WindowState="Maximized" Height="864" Width="1536">
+        Title="Reception" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowState="Maximized" Height="864" Width="1536">
     <Canvas Margin="0">
         <Label Content="Hospital&#xD;&#xA;Logo" Canvas.Left="10" Canvas.Top="10" Height="57" Width="87" FontSize="17" FontFamily="./Font/#Helvetica"/>
         <Label Content="Please enter the MedID:" Canvas.Left="84" Canvas.Top="72" Height="26" Width="140" FontFamily="./Font/#Helvetica"/>
@@ -17,5 +17,6 @@
         <Button x:Name="SOS" Content="Toggle SOS State" Canvas.Left="1219" Canvas.Top="7" Width="127" Height="37" Click="SOS_Click" FontFamily="./Font/#Helvetica"/>
         <Label x:Name="SOS1" Content="SOS Detected!" Canvas.Left="594" Canvas.Top="22" FontFamily="./Font/#Helvetica" FontSize="35" Visibility="Hidden"/>
         <Label x:Name="SOS2" Content="Click to learn&#xD;&#xA;       more" Canvas.Left="670" Canvas.Top="79" Height="43" Width="117" FontFamily="./Font/#Helvetica" MouseEnter="SOS2_MouseEnter" MouseLeave="SOS2_MouseLeave" Foreground="#FF001FFF" FontSize="15" Visibility="Hidden" MouseDown="SOS2_MouseDown"/>
+        <Button x:Name="logout" Content="Logout" Canvas.Left="1445" Canvas.Top="10" Width="75" Height="34" Foreground="#FFEA1010" Click="logout_Click"/>
     </Canvas>
 </Window>

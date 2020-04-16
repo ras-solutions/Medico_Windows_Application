@@ -33,7 +33,7 @@ namespace Medico
 
         }
 
-
+        /*
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             MessageBoxResult result = MessageBox.Show("Are you sure you would like to exit?", "", MessageBoxButton.YesNo, MessageBoxImage.Information);
@@ -43,7 +43,7 @@ namespace Medico
             }
             else
                 System.Windows.Application.Current.Shutdown();
-        }
+        }*/
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -113,6 +113,22 @@ namespace Medico
         {
             var res = new SOSResult();
             res.Show();
+        }
+
+        private void logout_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("Are you sure you would like to logout?", "", MessageBoxButton.YesNo, MessageBoxImage.Information);
+            if (result == MessageBoxResult.Yes)
+            {
+                var log = new LoginWindow();
+                App.Current.MainWindow = log;
+                this.Close();
+                log.Show();
+            }
+            else
+            {
+
+            }
         }
     }
 }

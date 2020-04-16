@@ -88,7 +88,7 @@ namespace Medico
         private void login_Click(object sender, RoutedEventArgs e)
         {
 
-            /*
+            
             if (role.Text == "")
             {
                 MessageBox.Show("Please select a role", "", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -106,19 +106,18 @@ namespace Medico
             else if (em && role.Text == "Reception")
             {
                 Reception rec = new Reception();
+                App.Current.MainWindow = rec;
                 rec.Show();
-                this.Hide();
+                this.Close();
             }
             else if(em && role.Text == "User")
             {
                 User usr = new User();
+                App.Current.MainWindow = usr;
                 usr.Show();
-                this.Hide();
+                this.Close();
             }
-        */
-            Reception rec = new Reception();
-            rec.Show();
-            this.Hide();
+        
         }
 
     }
