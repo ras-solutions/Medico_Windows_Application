@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -19,9 +21,16 @@ namespace Medico
     /// </summary>
     public partial class Reception : Window
     {
+        BackgroundWorker worker;
         public Reception()
         {
             InitializeComponent();
+            worker = new BackgroundWorker();
+            worker.DoWork += worker_DoWork;
+            worker.ProgressChanged += worker_ProgressChanged;
+            worker.WorkerReportsProgress = true;
+            worker.WorkerSupportsCancellation = true;
+
         }
 
 
@@ -34,6 +43,76 @@ namespace Medico
             }
             else
                 System.Windows.Application.Current.Shutdown();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        bool f=false;
+
+        void worker_DoWork(object sender, DoWorkEventArgs e)
+        {
+            BackgroundWorker worker = (BackgroundWorker)sender;
+            while (!worker.CancellationPending)
+            {
+                worker.ReportProgress(0);
+                System.Threading.Thread.Sleep(500);
+            }
+        }
+       
+        private void worker_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            var r = new SolidColorBrush(Colors.Red);
+            if (f == false)
+            {
+                this.Background = new SolidColorBrush(Colors.White);
+                f = true;
+            }
+            else
+            {
+                this.Background = new SolidColorBrush(Colors.Red);
+                f = false;
+            }
+        }
+        private int clickCounter = 0;
+        private void SOS_Click(object sender, RoutedEventArgs e)
+        {
+            
+            if (clickCounter >= 1)
+            {
+                SOS1.Visibility = Visibility.Hidden;
+                SOS2.Visibility = Visibility.Hidden;
+                worker.CancelAsync();
+                this.Background = new SolidColorBrush(Colors.White);
+                clickCounter = 0;
+            }
+            else
+            {
+                SOS1.Visibility = Visibility.Visible;
+                SOS2.Visibility = Visibility.Visible;
+                worker.RunWorkerAsync();
+                System.Threading.Thread.Sleep(500);
+                clickCounter += 1;
+            }
+           
+
+        }
+
+        private void SOS2_MouseEnter(object sender, MouseEventArgs e)
+        {
+            SOS2.Foreground = new SolidColorBrush(Colors.Green);
+        }
+
+        private void SOS2_MouseLeave(object sender, MouseEventArgs e)
+        {
+            SOS2.Foreground = new System.Windows.Media.SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF001FFF"));
+        }
+
+        private void SOS2_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            var res = new SOSResult();
+            res.Show();
         }
     }
 }

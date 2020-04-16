@@ -8,9 +8,14 @@
         Title="Reception" WindowStartupLocation="CenterScreen" Closing="Window_Closing" ResizeMode="NoResize" WindowState="Maximized" Height="864" Width="1536">
     <Canvas Margin="0">
         <Label Content="Hospital&#xD;&#xA;Logo" Canvas.Left="10" Canvas.Top="10" Height="57" Width="87" FontSize="17" FontFamily="./Font/#Helvetica"/>
-        <Label Content="Please enter the MedID:" Canvas.Left="58" Canvas.Top="72" Height="26" Width="140" FontFamily="./Font/#Helvetica"/>
-        <TextBox Height="23" Canvas.Left="203" TextWrapping="Wrap" Text="TextBox" Canvas.Top="72" Width="120"/>
-        <Button Content="Search " Width="75" Canvas.Left="152" Canvas.Top="113"/>
-        <GroupBox Header="GroupBox" Height="364" Canvas.Left="1017" Canvas.Top="17" Width="503"/>
+        <Label Content="Please enter the MedID:" Canvas.Left="84" Canvas.Top="72" Height="26" Width="140" FontFamily="./Font/#Helvetica"/>
+        <TextBox Height="23" Canvas.Left="258" TextWrapping="Wrap" Text="TextBox" Canvas.Top="72" Width="120"/>
+        <Button Content="Search " Width="76" Canvas.Left="190" Canvas.Top="120" FontFamily="./Font/#Helvetica"/>
+        <GroupBox Header="Avaliable Doctors" Height="483" Canvas.Left="1017" Canvas.Top="163" Width="503" FontFamily="./Font/#Helvetica"/>
+        <GroupBox Header="Patient Details" Height="483" Canvas.Left="34" Canvas.Top="163" Width="753" FontFamily="./Font/#Helvetica"/>
+        <Button Content="Assign to doctor&#xD;&#xA;          &gt;&gt;&gt;" Canvas.Left="862" Canvas.Top="334" Width="115" Height="75" Click="Button_Click" FontFamily="./Font/#Helvetica"/>
+        <Button x:Name="SOS" Content="Toggle SOS State" Canvas.Left="1219" Canvas.Top="7" Width="127" Height="37" Click="SOS_Click" FontFamily="./Font/#Helvetica"/>
+        <Label x:Name="SOS1" Content="SOS Detected!" Canvas.Left="594" Canvas.Top="22" FontFamily="./Font/#Helvetica" FontSize="35" Visibility="Hidden"/>
+        <Label x:Name="SOS2" Content="Click to learn&#xD;&#xA;       more" Canvas.Left="670" Canvas.Top="79" Height="43" Width="117" FontFamily="./Font/#Helvetica" MouseEnter="SOS2_MouseEnter" MouseLeave="SOS2_MouseLeave" Foreground="#FF001FFF" FontSize="15" Visibility="Hidden" MouseDown="SOS2_MouseDown"/>
     </Canvas>
 </Window>

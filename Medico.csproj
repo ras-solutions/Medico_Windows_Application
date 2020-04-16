@@ -59,6 +59,9 @@
     <Compile Include="Reception.xaml.cs">
       <DependentUpon>Reception.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SOSResult.xaml.cs">
+      <DependentUpon>SOSResult.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SplashScreenWindow.xaml.cs">
       <DependentUpon>SplashScreenWindow.xaml</DependentUpon>
     </Compile>
@@ -78,6 +81,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Reception.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SOSResult.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
