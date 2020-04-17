@@ -1,21 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Media;
-using System.Text;
+﻿using System.Media;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Animation;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.Windows.Threading;
 
 namespace Medico
 {
@@ -88,7 +74,7 @@ namespace Medico
         private void login_Click(object sender, RoutedEventArgs e)
         {
 
-            
+
             if (role.Text == "")
             {
                 MessageBox.Show("Please select a role", "", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -97,11 +83,11 @@ namespace Medico
             {
                 MessageBox.Show("Email field empty, Please Check", "", MessageBoxButton.OK, MessageBoxImage.Information);
             }
-            else if(!em)
+            else if (!em)
             {
                 email.BorderBrush = System.Windows.Media.Brushes.Red;
                 SystemSounds.Beep.Play();
-                MessageBox.Show("Invalid Email, Please check","", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Invalid Email, Please check", "", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             else if (em && role.Text == "Reception")
             {
@@ -110,7 +96,7 @@ namespace Medico
                 rec.Show();
                 this.Close();
             }
-            else if(em && role.Text == "User")
+            else if (em && role.Text == "User")
             {
                 User usr = new User();
                 App.Current.MainWindow = usr;
