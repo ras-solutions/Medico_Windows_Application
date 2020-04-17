@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Medico"
         mc:Ignorable="d"
-        Title="Reception" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowState="Maximized" Height="864" Width="1536" Closing="Window_Closing">
+        Title="Reception" Name="Rec" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowState="Maximized" Height="864" Width="1536" Closing="Window_Closing">
     <Canvas Margin="0">
         <Label Content="Hospital&#xD;&#xA;Logo" Canvas.Left="10" Canvas.Top="10" Height="57" Width="87" FontSize="17" FontFamily="./Font/#Helvetica"/>
         <Label Content="Please enter the MedID:" Canvas.Left="84" Canvas.Top="72" Height="26" Width="140" FontFamily="./Font/#Helvetica"/>
