@@ -117,7 +117,14 @@ namespace Medico
                 usr.Show();
                 this.Close();
             }
-        
+            else if (em && role.Text == "Doctor")
+            {
+                Doctor dct = new Doctor();
+                App.Current.MainWindow = dct;
+                dct.Show();
+                this.Close();
+            }
+
         }
 
     }

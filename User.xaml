@@ -17,7 +17,7 @@
         </Canvas.RenderTransform>
         <Label x:Name="User_dayDate" Content="Today, " FontFamily="./Font/#Helvetica" FontSize="30" Height="78" Canvas.Left="36" Canvas.Top="141" Width="197"/>
         <Label Content="Welcome _____" Canvas.Left="18" Canvas.Top="10" RenderTransformOrigin="-0.015,-0.252" FontFamily="./Font/#Helvetica" FontSize="40"/>
-        <Rectangle Fill="#FFF4F4F5" Height="814" Canvas.Left="839" Stroke="Black" Canvas.Top="7" Width="680" RenderTransformOrigin="0.5,0.5">
+        <Rectangle Fill="#FFF4F4F5" Height="754" Canvas.Left="836" Stroke="Black" Canvas.Top="67" Width="683" RenderTransformOrigin="0.5,0.5">
             <Rectangle.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -27,8 +27,11 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <GroupBox Header="At a glance" Height="198" Canvas.Left="36" Canvas.Top="344" Width="333" FontFamily="./Font/#Helvetica" FontSize="20">
-            <Label Content="Active Conditions:&#xD;&#xA;Upcoming Hospital Visit:&#xD;&#xA;Current Medications:&#xD;&#xA;Upcoming Schedule:" HorizontalAlignment="Left" Height="150" Margin="10,10,0,0" VerticalAlignment="Top" Width="296" FontSize="15"/>
+        <GroupBox Header="At a glance" Height="131" Canvas.Left="36" Canvas.Top="293" Width="522" FontFamily="./Font/#Helvetica" FontSize="20">
+            <Label Content="Active Conditions:&#xD;&#xA;Upcoming Hospital Visit:&#xD;&#xA;Current Medications:&#xD;&#xA;Upcoming Schedule:" Margin="10,10,16.6,5.8" FontSize="15"/>
         </GroupBox>
+        <Button x:Name="logout" Content="Logout" Canvas.Left="1444.9" Canvas.Top="9.6" Width="75" Height="34" Foreground="#FFEA1010" Click="logout_Click" FontFamily="./Font/#Helvetica"/>
+        <WebBrowser Height="270" Canvas.Left="36" Canvas.Top="536" Width="522"/>
+        <Label Content="Hospitals and health services around you:" Canvas.Left="36" Canvas.Top="507" FontFamily="./Font/#Helvetica" FontSize="15"/>
     </Canvas>
 </Window>

@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace Medico
 {
     /// <summary>
-    /// Interaction logic for User.xaml
+    /// Interaction logic for Doctor.xaml
     /// </summary>
-    public partial class User : Window
+    public partial class Doctor : Window
     {
-        public User()
+        public Doctor()
         {
             InitializeComponent();
         }
@@ -33,11 +33,6 @@ namespace Medico
             }
             else
                 System.Windows.Application.Current.Shutdown();
-        }
-
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            User_dayDate.Content = DateTime.Now.ToString("dddd , \n MMM dd yyyy");
         }
 
         private void logout_Click(object sender, RoutedEventArgs e)
