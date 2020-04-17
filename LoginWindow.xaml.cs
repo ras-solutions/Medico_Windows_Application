@@ -124,6 +124,13 @@ namespace Medico
                 dct.Show();
                 this.Close();
             }
+            else if (em && role.Text == "Pharmacy")
+            {
+                Pharmacy ph = new Pharmacy();
+                App.Current.MainWindow = ph;
+                ph.Show();
+                this.Close();
+            }
 
         }
 

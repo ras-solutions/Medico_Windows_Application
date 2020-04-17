@@ -15,24 +15,13 @@ using System.Windows.Shapes;
 namespace Medico
 {
     /// <summary>
-    /// Interaction logic for Doctor.xaml
+    /// Interaction logic for Pharmacy.xaml
     /// </summary>
-    public partial class Doctor : Window
+    public partial class Pharmacy : Window
     {
-        public Doctor()
+        public Pharmacy()
         {
             InitializeComponent();
-        }
-
-        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            MessageBoxResult result = MessageBox.Show("Are you sure you would like to exit?", "", MessageBoxButton.YesNo, MessageBoxImage.Information);
-            if (result != MessageBoxResult.Yes)
-            {
-                e.Cancel = true;
-            }
-            else
-                System.Windows.Application.Current.Shutdown();
         }
 
         private void logout_Click(object sender, RoutedEventArgs e)
@@ -52,10 +41,15 @@ namespace Medico
             }
         }
 
-        private void addMed_Click(object sender, RoutedEventArgs e)
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            var admed = new docAssignMed();
-            admed.Show();
+            MessageBoxResult result = MessageBox.Show("Are you sure you would like to exit?", "", MessageBoxButton.YesNo, MessageBoxImage.Information);
+            if (result != MessageBoxResult.Yes)
+            {
+                e.Cancel = true;
+            }
+            else
+                System.Windows.Application.Current.Shutdown();
         }
     }
 }

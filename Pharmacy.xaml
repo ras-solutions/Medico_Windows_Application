@@ -1,0 +1,19 @@
+﻿<Window x:Class="Medico.Pharmacy"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Medico"
+        mc:Ignorable="d"
+        Title="Pharmacy" Height="864" Width="1536" FontFamily="./Font/#Helvetica" WindowStartupLocation="CenterScreen" WindowState="Maximized" Closing="Window_Closing">
+    <Canvas Margin="0">
+        <Button x:Name="logout" Content="Logout" Canvas.Left="1444.9" Canvas.Top="9.6" Width="75" Height="34" Foreground="#FFEA1010" Click="logout_Click" FontFamily="./Font/#Helvetica"/>
+        <Label Content="Hospital&#xA;Logo" Canvas.Left="9.7" Canvas.Top="9.6" Height="57" Width="87" FontSize="17" FontFamily="./Font/#Helvetica"/>
+        <Label Content="Please enter the MedID:" Canvas.Left="84" Canvas.Top="72" Height="26" Width="140" FontFamily="./Font/#Helvetica"/>
+        <TextBox Height="26" Canvas.Left="229" TextWrapping="Wrap" Canvas.Top="72" Width="149"/>
+        <Button Content="Search " Width="76" Canvas.Left="190.4" Canvas.Top="120" FontFamily="./Font/#Helvetica"/>
+        <GroupBox Header="Patient Prescription Details" Height="483" Canvas.Left="33.6" Canvas.Top="163.3" Width="753" FontFamily="./Font/#Helvetica"/>
+        <GroupBox Header="Medicines Fullfilled" Height="349" Canvas.Left="958" Canvas.Top="163" Width="524" FontFamily="./Font/#Helvetica"/>
+        <Button Content="Generate Invoice/&#xD;&#xA;Send to Billing" Canvas.Left="1027" Canvas.Top="568" Width="138" Height="78" FontSize="15"/>
+    </Canvas>
+</Window>

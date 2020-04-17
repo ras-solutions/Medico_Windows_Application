@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Medico"
         mc:Ignorable="d"
         Title="Doctor" Height="864" Width="1536" Closing="Window_Closing" WindowStartupLocation="CenterScreen" WindowState="Maximized">
-    <Canvas Margin="0">
+    <Canvas Margin="2,0,-2.4,0.4">
         <Button x:Name="logout" Content="Logout" Foreground="#FFEA1010" Click="logout_Click" FontFamily="./Font/#Helvetica" Height="34" Canvas.Left="1444.9" Canvas.Top="9.6" Width="75"/>
         <Label Content="Current Patient:" Canvas.Left="10" Canvas.Top="23" FontSize="15" FontFamily="./Font/#Helvetica"/>
         <Label Content="Next Patient:" Canvas.Left="405" Canvas.Top="23" FontSize="15" FontFamily="./Font/#Helvetica"/>
@@ -38,9 +38,17 @@
             </Canvas>
         </GroupBox>
         <GroupBox Header="Diagnosis" Height="600" Canvas.Left="770" Canvas.Top="178" Width="750" BorderBrush="Black" FontSize="15" FontFamily="./Font/#Helvetica"/>
-        <Canvas Height="576" Canvas.Left="777" Canvas.Top="202" Width="743">
-            <Label Content="Current Medications:" Canvas.Top="8" FontFamily="./Font/#Helvetica"/>
-            <Rectangle Fill="#FFF4F4F5" Height="100" Canvas.Left="10" Stroke="Black" Canvas.Top="37" Width="320"/>
+        <Canvas Height="576" Canvas.Left="777" Canvas.Top="202" Width="744">
+            <Label Content="Current Symptoms:" Canvas.Top="8" FontFamily="./Font/#Helvetica" FontSize="15"/>
+            <Rectangle Fill="#FFF4F4F5" Height="241" Canvas.Left="10" Stroke="Black" Canvas.Top="37" Width="350"/>
+            <Button x:Name="addMed" Content="   Assign&#xD;&#xA;Medications" Canvas.Left="25" Canvas.Top="298" Width="95" FontFamily="./Font/#Helvetica" FontSize="15" Height="53" Click="addMed_Click"/>
+            <Button x:Name="sndTst" Content="Send for &#xD;&#xA;   Test" Canvas.Left="150" Canvas.Top="298" Width="95" FontFamily="./Font/#Helvetica" FontSize="15" Height="53"/>
+            <Button x:Name="rsr" Content="Resources" Canvas.Left="25" Canvas.Top="374" Width="95" FontFamily="./Font/#Helvetica" FontSize="15" Height="53"/>
+            <Label Content="Medical Notes:" Canvas.Top="10" FontFamily="./Font/#Helvetica" FontSize="15" Canvas.Left="365"/>
+            <Rectangle Fill="#FFF4F4F5" Height="241" Canvas.Left="384" Stroke="Black" Canvas.Top="37" Width="350"/>
+            <Button x:Name="actv" Content="   Active&#xD;&#xA;Prescriptions" Canvas.Left="150" Canvas.Top="374" Width="95" FontFamily="./Font/#Helvetica" FontSize="15" Height="53"/>
+            <Label Content="Additonal Comments:" Canvas.Top="283" FontFamily="./Font/#Helvetica" FontSize="15" Canvas.Left="365"/>
+            <Rectangle Fill="#FFF4F4F5" Height="241" Canvas.Left="384" Stroke="Black" Canvas.Top="310" Width="350"/>
         </Canvas>
     </Canvas>
 </Window>
