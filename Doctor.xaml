@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Medico"
         mc:Ignorable="d"
-        Title="Doctor" Height="864" Width="1536" Closing="Window_Closing" WindowStartupLocation="CenterScreen" WindowState="Maximized">
-    <Canvas Margin="2,0,-2.4,0.4">
-        <Button x:Name="logout" Content="Logout" Foreground="#FFEA1010" Click="logout_Click" FontFamily="./Font/#Helvetica" Height="34" Canvas.Left="1444.9" Canvas.Top="9.6" Width="75"/>
-        <Label Content="Current Patient:" Canvas.Left="10" Canvas.Top="23" FontSize="15" FontFamily="./Font/#Helvetica"/>
-        <Label Content="Next Patient:" Canvas.Left="405" Canvas.Top="23" FontSize="15" FontFamily="./Font/#Helvetica"/>
-        <Rectangle Fill="#FFF4F4F5" Height="77" Canvas.Left="10" Stroke="Black" Canvas.Top="61" Width="150"/>
-        <Rectangle Fill="#FFF4F4F5" Height="77" Canvas.Left="405" Stroke="Black" Canvas.Top="61" Width="150"/>
-        <Button Content="Send Next &#xD;&#xA;    Patient&#xD;&#xA;    &gt;&gt;&gt;&gt;" Canvas.Left="226" Canvas.Top="61" Width="90" Height="77"/>
-        <GroupBox Header="Patient Details" Height="600" Canvas.Left="10" Canvas.Top="178" Width="750" BorderBrush="Black" FontSize="15" FontFamily="./Font/#Helvetica">
+        Title="Doctor" Height="864" Width="1536" Closing="Window_Closing" WindowStartupLocation="CenterScreen" SizeToContent="WidthAndHeight" WindowState="Maximized">
+    <Grid HorizontalAlignment="Left" Margin="0,10,0,-19.6" Width="1526" Height="844" VerticalAlignment="Top">
+        <Button x:Name="logout" Content="Logout" Foreground="#FFEA1010" Click="logout_Click" FontFamily="./Font/#Helvetica" Margin="1435,0,0,771" HorizontalAlignment="Left" Width="75" Height="33" VerticalAlignment="Bottom"/>
+        <Label Content="Current Patient:" FontSize="15" FontFamily="./Font/#Helvetica" Margin="10,23,0,0" HorizontalAlignment="Left" Width="115" Height="27" VerticalAlignment="Top"/>
+        <Label Content="Next Patient:" FontSize="15" FontFamily="./Font/#Helvetica" Margin="405,23,0,0" HorizontalAlignment="Left" Width="96" Height="27" VerticalAlignment="Top"/>
+        <Rectangle Fill="#FFF4F4F5" Stroke="Black" Margin="10,61,0,0" HorizontalAlignment="Left" Width="150" Height="76" VerticalAlignment="Top"/>
+        <Rectangle Fill="#FFF4F4F5" Stroke="Black" Margin="405,61,0,0" HorizontalAlignment="Left" Width="150" Height="76" VerticalAlignment="Top"/>
+        <Button Content="Send Next &#xA;    Patient&#xA;    &gt;&gt;&gt;&gt;" Margin="226,61,0,0" HorizontalAlignment="Left" Width="90" Height="76" VerticalAlignment="Top"/>
+        <GroupBox Header="Patient Details" BorderBrush="Black" FontSize="15" FontFamily="./Font/#Helvetica" Margin="10,178,0,0" HorizontalAlignment="Left" Width="750" Height="599" VerticalAlignment="Top">
             <Canvas Margin="0,10,-5.6,-6">
                 <Label Content="Name:" Canvas.Left="12" Canvas.Top="14"/>
                 <Label Content="DOB:" Canvas.Left="12" Canvas.Top="47"/>
@@ -37,18 +37,18 @@
                 <Button Content="Refresh" Canvas.Left="633" Canvas.Top="10" Width="101"/>
             </Canvas>
         </GroupBox>
-        <GroupBox Header="Diagnosis" Height="600" Canvas.Left="770" Canvas.Top="178" Width="750" BorderBrush="Black" FontSize="15" FontFamily="./Font/#Helvetica"/>
-        <Canvas Height="576" Canvas.Left="777" Canvas.Top="202" Width="744">
+        <GroupBox Header="Diagnosis" BorderBrush="Black" FontSize="15" FontFamily="./Font/#Helvetica" Margin="770,178,0,0" HorizontalAlignment="Left" Width="750" Height="599" VerticalAlignment="Top"/>
+        <Canvas Margin="776.8,201.6,5.2,56.4">
             <Label Content="Current Symptoms:" Canvas.Top="8" FontFamily="./Font/#Helvetica" FontSize="15"/>
             <Rectangle Fill="#FFF4F4F5" Height="241" Canvas.Left="10" Stroke="Black" Canvas.Top="37" Width="350"/>
-            <Button x:Name="addMed" Content="   Assign&#xD;&#xA;Medications" Canvas.Left="25" Canvas.Top="298" Width="95" FontFamily="./Font/#Helvetica" FontSize="15" Height="53" Click="addMed_Click"/>
-            <Button x:Name="sndTst" Content="Send for &#xD;&#xA;   Test" Canvas.Left="150" Canvas.Top="298" Width="95" FontFamily="./Font/#Helvetica" FontSize="15" Height="53"/>
+            <Button x:Name="addMed" Content="   Assign&#xA;Medications" Canvas.Left="25" Canvas.Top="298" Width="95" FontFamily="./Font/#Helvetica" FontSize="15" Height="53" Click="addMed_Click"/>
+            <Button x:Name="sndTst" Content="Send for &#xA;   Test" Canvas.Left="150" Canvas.Top="298" Width="95" FontFamily="./Font/#Helvetica" FontSize="15" Height="53"/>
             <Button x:Name="rsr" Content="Resources" Canvas.Left="25" Canvas.Top="374" Width="95" FontFamily="./Font/#Helvetica" FontSize="15" Height="53"/>
             <Label Content="Medical Notes:" Canvas.Top="10" FontFamily="./Font/#Helvetica" FontSize="15" Canvas.Left="365"/>
             <Rectangle Fill="#FFF4F4F5" Height="241" Canvas.Left="384" Stroke="Black" Canvas.Top="37" Width="350"/>
-            <Button x:Name="actv" Content="   Active&#xD;&#xA;Prescriptions" Canvas.Left="150" Canvas.Top="374" Width="95" FontFamily="./Font/#Helvetica" FontSize="15" Height="53"/>
+            <Button x:Name="actv" Content="   Active&#xA;Prescriptions" Canvas.Left="150" Canvas.Top="374" Width="95" FontFamily="./Font/#Helvetica" FontSize="15" Height="53"/>
             <Label Content="Additonal Comments:" Canvas.Top="283" FontFamily="./Font/#Helvetica" FontSize="15" Canvas.Left="365"/>
             <Rectangle Fill="#FFF4F4F5" Height="241" Canvas.Left="384" Stroke="Black" Canvas.Top="310" Width="350"/>
         </Canvas>
-    </Canvas>
+    </Grid>
 </Window>
